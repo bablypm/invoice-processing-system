@@ -1,0 +1,82 @@
+﻿@section Scripts {
+<script type="text/javascript" src="~/js/invoice.js"></script>
+}
+
+<div class="container mt-3">
+    <h4>Create Invoice</h4>
+    <p>Use this form to submit the vendor invoice documents for processing and payment.</p>
+    <span class="note">For any clarifications, contact <a href="">Accounts</a> department.</span>
+
+</div>
+
+ 
+
+<div id="tabs">
+    <form>
+        <ul>
+            <li><a href="#tabs-1">Invoice</a></li>
+            <li><a href="ajax/content1.html">Allocations</a></li>
+            <li><a href="ajax/content2.html">Tax Details</a></li>
+            <li><a href="ajax/content3-slow.php">Attachments</a></li>
+            <li><a href="ajax/content4-broken.php">Approvals & History</a></li>
+        </ul>
+        <div id="tabs-1">
+            
+             <p class="bg-secondary text-white">Supplier/Vendor Information </p>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Vendor Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" name="vendor" disabled value="ABC Cleaning Services" />
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor ID</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="V100000099190">
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Location</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="New York">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Vendor Invoice#</label>
+
+                    <input type="text" class="form-control form-control-sm" name="vendor" value="" />
+
+                </div>
+                <div class="col-sm-3">
+                    <label>Payment Term</label>
+                    <select class="form-select">
+                        <option>Net 7 – Payment due in 7 days from invoice date</option>
+                        <option>Net 30 – Payment due in 30 days from invoice date</option>
+                        <option>COD – Cash on Delivery</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Bank</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="CITI">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Address</label>
+                    <textarea class="form-control form-control-sm" disabled>239/4, New York, U.S</textarea>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Account#</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="89012000001">
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Bank Account#</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="XXXXXX">
+                </div>
+            </div>
+
+             <p class="bg-secondary text-white">Invoice Header Information</p>
+
+        </div>
+    </form>
+</div>
