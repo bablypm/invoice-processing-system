@@ -1,0 +1,47 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.title{
+    background-color: black;
+    color: white
+}
+
+.nav-link{
+    font-weight:bold
+}
+.site-bg{
+    background-color:rgb(248,249,250)
+}
+.welcome {
+    font-size: small;
+    background-color:darkcyan;
+    color: white
+}
+.note
+{
+    font-size: smaller
+}
+label, input, select {
+    font-size: small;
+}
+label{
+    color:#c28282
+}
+.ui-widget {
+    font-size: small!important;
+}

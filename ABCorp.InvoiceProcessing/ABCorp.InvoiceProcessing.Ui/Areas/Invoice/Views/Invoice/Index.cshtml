@@ -1,0 +1,236 @@
+﻿@section Scripts {
+<script type="text/javascript" src="~/js/invoice.js"></script>
+}
+
+<div class="container mt-3">
+    <h4>Create Invoice</h4>
+    <p>Use this form to submit the vendor invoice documents for processing and payment.</p>
+    <span class="note">For any clarifications, contact <a href="">Accounts</a> department.</span>
+
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Invoice#: V190-2022-13</h4>
+        <p class="card-text">Invoice Status: Awaiting Approval</p>
+        <a href="#" class="card-link">View Original Invoice</a>
+    </div>
+</div>
+<p></p>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary btn-sm me-md-2" type="button">Save</button>
+  <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+</div>
+<p></p>
+<div id="tabs">
+    <form>
+        <ul>
+            <li><a href="#tabs-1">Invoice</a></li>
+            <li><a href="ajax/content1.html">Allocations</a></li>
+            <li><a href="ajax/content2.html">Tax Details</a></li>
+            <li><a href="ajax/content3-slow.php">Attachments</a></li>
+            <li><a href="ajax/content4-broken.php">Approvals & History</a></li>
+        </ul>
+        <div id="tabs-1">
+
+            <p class="bg-secondary text-white">Supplier/Vendor Information </p>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Vendor Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" name="vendor" disabled value="ABC Cleaning Services" />
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Code</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="V190">
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Location</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="New York">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Vendor Invoice#</label>
+
+                    <input type="text" class="form-control form-control-sm" name="vendor" value="" />
+
+                </div>
+                <div class="col-sm-3">
+                    <label>Payment Term</label>
+                    <select class="form-select">
+                        <option>Net 7 – Payment due in 7 days from invoice date</option>
+                        <option>Net 30 – Payment due in 30 days from invoice date</option>
+                        <option>COD – Cash on Delivery</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Bank</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="CITI">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label>Address</label>
+                    <textarea class="form-control form-control-sm" disabled>239/4, New York, U.S</textarea>
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Account#</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="89012000001">
+                </div>
+                <div class="col-sm-3">
+                    <label>Vendor Bank Account#</label>
+                    <input type="text" class="form-control form-control-sm" disabled value="XXXXXX">
+                </div>
+            </div>
+
+            <p class="bg-secondary text-white">Invoice Header Information</p>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="row-cols-1 mb-3">
+                        <div class="col">
+                            <label>Invoice Date</label>
+                            <input type="date" class="form-control form-control-sm" />
+                        </div>
+                        <div class="col">
+                            <label>Discount Due Date</label>
+                            <input type="date" class="form-control form-control-sm" />
+                        </div>
+                        <div class="col">
+                            <label>Discount Amount</label>
+                            <input type="number" class="form-control form-control-sm">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="row-cols-1 mb-3">
+                        <div class="col">
+                            <label>Invoice Currency</label>
+                            <select class="form-select">
+                                <option>USD</option>
+                                <option>GBP</option>
+                                <option>INR</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Invoice Amount</label>
+                            <input type="number" class="form-control form-control-sm">
+                        </div>
+                        <div class="col">
+                            <label>Payment Amount</label>
+                            <input type="number" class="form-control form-control-sm" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="row-cols-sm-1 mb-3">
+                        <div class="col">
+                            <label>Total Allocation Amount</label>
+                            <input type="number" class="form-control form-control-sm" readonly>
+                        </div>
+                        <div class="col">
+                            <label>Freight Charges</label>
+                            <input type="number" class="form-control form-control-sm">
+                        </div>
+                        <div class="col">
+                            <label>Misc. Charges</label>
+                            <input type="number" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row-cols-sm-1 mb-3">
+                        <div class="col">
+                            <label>Work Order#</label>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+                        <div class="col">
+                            <label>Invoice Period From</label>
+                            <input type="date" class="form-control form-control-sm">
+                        </div>
+                        <div class="col">
+                            <label>Invoice Period To</label>
+                            <input type="date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="bg-secondary text-white">Approval Information </p>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="row-cols-1 mb-3">
+                        <div class="col">
+                            <label>Invoice Addressee</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-sm" name="vendor" disabled value="Bably P M" />
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                        <div class="col mt-3">
+                            <label>Approval Type</label>
+                            <select class="form-select">
+                                <option>Authorized Signatory List</option>
+                                <option>Manual</option>
+                                <option>Standard Routing</option>
+                            </select>
+                        </div>
+                        <div class="col mt-3">
+                            <label>AP Region</label>
+                            <select class="form-select">
+                                <option>New York</option>
+                                <option>United Kingdom</option>
+                                <option>Japan</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="row-cols-1">
+                        <div class="col mt-3">
+                            <p>Approver(s)</p>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Approver</th>
+                                        <th>Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>Mary Moe</td>
+                                        <td>Additional Approver</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Primary ASL Approver</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Finance Team</td>
+                                        <td>Final Approver</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<p></p>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary btn-sm me-md-2" type="button">Save</button>
+  <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+</div>
