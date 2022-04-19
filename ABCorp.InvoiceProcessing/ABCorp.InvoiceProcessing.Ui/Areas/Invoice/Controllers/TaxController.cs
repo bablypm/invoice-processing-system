@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace XYZCorp.InvoiceProcessing.Ui.Areas.Invoice.Controllers
+namespace ABCorp.InvoiceProcessing.Ui.Areas.Invoice.Controllers
 {
     public class TaxController : Controller
     {
